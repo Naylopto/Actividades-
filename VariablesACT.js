@@ -36,6 +36,17 @@ let cadena3 = ("EN JS, ME SIENTO PERDIDA, PERDIDA, PERDIDAAAA!")
 let cadena4 = (" y si pongo esto en japo, igual no tengo  un limite")
 let cadena5 = (" Maigo ni natta yo, maigo, maigooo!!! ")
 
+let nayeViveSola =false;
+let mayorDeEdad = true;
+let estaCasada = false;
+let tieneHijos = false;
+let esLunes = true;
+let tieneGato = true;
+let viveConPapas = false;
+let quiereDormir = true;
+let quiereComer = false;
+let terminoLicenciatura = false;
+
 // operaciones basicas
 let suma = number4 + number9 ;
 let resta = number1 - number5; 
