@@ -64,4 +64,7 @@ console.log("Este es el resultado de la division" + division);
 
 console.log(cadena1 + cadena2 + cadena3 + cadena4 + cadena5);
 
+//Boolean
+
+
 
