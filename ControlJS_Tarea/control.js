@@ -109,6 +109,28 @@ function divisible4u9 (numero) {
  * Consideraciones: utilizar la estructura switch
  */
 
+function calculadorasimple(operacion, n1, n2){
+    const operacionMinusculas = operacion.tolowerCase();
+    switch (operacion){
+        case 'suma':
+            const suma = n1 + n2 ;
+            console.log("suma");
+        break;
+        case 'resta':
+            const resta = n1 + n2 ;
+            console.log("resta");
+        break;
+        case 'multiplicacion':
+            const multiplicacion = n1 + n2 ;
+            console.log("multiplicacion");
+        break;
+        case 'division':
+            const division = n1 + n2 ;
+            console.log("division");
+        break;
+
+    }
+}
 /** Ejercicio 7
  * 
  * Realizar un programa que reciba como parametro una categoria de peliculas
