@@ -58,7 +58,7 @@ function secretName(members) {
     let iniciales = '';
 
     for (let i = 0; i < members.length; i++) {
-        iniciales += members[i][0]; 
+        iniciales += members[i][0];
     }
     return iniciales;
 }
@@ -74,13 +74,37 @@ Display online status for a list of users.
  
 
 Example:
-- `onlineStatus(['mockIng99', 'J0eyPunch', 'glassedFer'])` should return `'mockIng99, J0eyPunch and 1 more online'`.  */
+- `onlineStatus(['mockIng99', 'J0eyPunch', 'glassedFer'])` 
+should return `'mockIng99, J0eyPunch and 1 more online'`.  */
  
-function onlineStatus(status) {
-    
+// obtener la cantidad total de usuaios 
+// calcular usuarios restantes 
+// obtener los primeros dos 
+// imprimir mensaje 
+
+const users = ['mockIng99', 'J0eyPunch', 'glassedFer', 'anon123']
+
+function getLenght(arr) {
+    return arr.length;
 }
 
+function calcRemaining(total){
+    return total -2;
+}
 
+function getUser(arr){
+    const user = arr[0] + arr[1];
+    return user;
+}
+
+function onlineStatus(arr){
+    const total = getLenght(arr);
+    const rest = calcRemaining(total);
+    const  firstUser = getUser(arr);
+
+    console.log(` User: ${firstUser}, and ${rest}, are online`)
+}
+onlineStatus(users);
 
 
 
@@ -95,7 +119,7 @@ Examples:
 - `arrayMultiplos(17, 6)` should return `[17, 34, 51, 68, 85, 102]`.  */
  
 
-/**Positive dominance in Array
+/**Positive dominance in Array (clase)
  
 
 Write a function to determine if an array is positively dominant.
@@ -105,6 +129,25 @@ An array is positively dominant when the majority of its elements are positive.
 Example:
 - `positiveDom([-1, -3, -5, 4, 6767])` should return `false`.   */
  
+const numArr = [ -1, -3, 5, 4, 6767]
+const negativeArr = [ -1, -3, -5, 4, 6767 ]
+
+function positiveArr(arr) {
+    let positiveCount = 0;
+
+    arr.forEach((num) => {
+        if (num > 0) {
+            positiveCount++;
+        }
+    })
+
+    const mid = arr.length / 2;
+    return positiveCount > mid;
+}
+
+const res = positiveArr(negativeArr);
+console.log(res);
+
 
 /**Antipodal Average
  
