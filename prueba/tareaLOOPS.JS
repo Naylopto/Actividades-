@@ -55,11 +55,14 @@ Examples:
   */
 
 function secretName(members) {
-    let iniciales = '';
+    let inicialesArray = [];
 
     for (let i = 0; i < members.length; i++) {
-        iniciales += members[i][0];
+        inicialesArray.push(members[i][0].toLowerCase())
     }
+    inicialesArray = inicialesArray.sort();
+    let iniciales = inicialesArray.join('');
+
     return iniciales;
 }
 console.log(secretName(["Esperanza", "Franco", "Nia"]));
@@ -118,6 +121,18 @@ Examples:
 - `arrayMultiplos(2, 10)` should return `[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]`.
 - `arrayMultiplos(17, 6)` should return `[17, 34, 51, 68, 85, 102]`.  */
  
+function arrayMultiplos(numero, longitud){
+    let resultados = [];
+    
+    for (let i = 1; i <= longitud; i++) {
+        let multiplo = numero*[i];
+
+        resultados.push(multiplo);
+    }
+    return resultados;
+}
+console.log(arrayMultiplos(2, 10));
+console.log(arrayMultiplos(17,6));
 
 /**Positive dominance in Array (clase)
  
@@ -161,3 +176,4 @@ Given an array, return a shorter array following these steps:
 Example:
 - For the array `[1,2,3,5,22,6]`, the result should be `[3.5, 12, 4]`.
  */
+
