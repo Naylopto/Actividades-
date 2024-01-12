@@ -194,7 +194,7 @@ function splitArr(arr) {
     let res = [];
 
     for(let count = 0; count < arr1.length; count++){
-        res.push(arr1[count] + arr2[count]);
+        res.push((arr1[count] + arr2[count])*.5);
     }
     console.log(res)
 
