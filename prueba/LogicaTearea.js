@@ -16,7 +16,7 @@ let peliculas = []
 
 function PeliculaFavorita (){
     scanner = scanner.nextline();
-    
+
 }
 
 // Número más alto

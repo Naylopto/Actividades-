@@ -177,3 +177,26 @@ Example:
 - For the array `[1,2,3,5,22,6]`, the result should be `[3.5, 12, 4]`.
  */
 
+/**
+ *Dividir array en 2 
+ *sumar cada elemento de array 1 
+ invertir array 2 (inverso)
+ dividir casa numero 
+ */
+let arr = [1,2,3,5,22,6];
+
+function splitArr(arr) {
+    const arrlen = arr.length;
+    const half = arrlen /2;
+    const arr1 = arr.slice(0, half);
+    const arr2 = arr.slice(half, arr.length).reverse();
+
+    let res = [];
+
+    for(let count = 0; count < arr1.length; count++){
+        res.push(arr1[count] + arr2[count]);
+    }
+    console.log(res)
+
+}
+splitArr(arr)
