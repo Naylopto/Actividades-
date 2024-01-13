@@ -10,14 +10,26 @@
  * lista peliculas favoritas
  */
 
-let nombreUsuaro = scanner.nextline('')
-let edad = (n)
-let peliculas = []
 
-function PeliculaFavorita (){
-    scanner = scanner.nextline();
+let nombreUsuaro = prompt('ingrese usuario');
+let edadUsuario = prompt('edad');
+let peliculasFav = prompt('ingrese peliculas favoritas, favor de separar con "," ')
 
-}
+
+const listaPeliculas = peliculasFav.split(',');
+
+console.log('Perfil de usuario')
+console.log('nombre de usuario: ' + nombreUsuaro);
+console.log('Edad: ' + edadUsuario, 'años');
+
+function imprimirPeliculas(peliculas) {
+    
+    for(let i = 0; peliculas.length; i++){
+        console.log('la pelicula ' + peliculas[i].trim() + ' es una de mis favoritas.');
+    }
+
+} 
+this.imprimirPeliculas(listaPeliculas)
 
 // Número más alto
 // Escribe un programa que pida 10 números. Usando operadores lógicos y cualquier otra función/estructura javascript que 
