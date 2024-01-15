@@ -1,9 +1,6 @@
 // Realiza los siguientes ejercicios en JS y entrega por medio de un link tu repositorio que contiene los ejercicios resueltos.
 
 // Perfil de usuario
-// Escribe un programa que pida a un usuario sus datos: nombre de usuario, edad y una lista 
-//de sus películas favoritas. Almacena la información y luego muéstrala en la consola. 
-//Ten en cuenta que la salida para las películas debe añadir un pequeño mensaje como: 'La película {film} es una de mis favoritas'.
 /**
  * nombre de usuario
  * edad
@@ -11,7 +8,7 @@
  */
 
 
-let nombreUsuaro = prompt('ingrese usuario');
+/*let nombreUsuaro = prompt('ingrese usuario');
 let edadUsuario = prompt('edad');
 let peliculasFav = prompt('ingrese peliculas favoritas, favor de separar con "," ')
 
@@ -24,16 +21,42 @@ console.log('Edad: ' + edadUsuario, 'años');
 
 function imprimirPeliculas(peliculas) {
     
-    for(let i = 0; peliculas.length; i++){
-        console.log('la pelicula ' + peliculas[i].trim() + ' es una de mis favoritas.');
+    for(let i = 0; i < peliculas.length; i++){
+        console.log('la pelicula ' + peliculas[i] + ' es una de mis favoritas.');
+        
     }
-
+    return
 } 
-this.imprimirPeliculas(listaPeliculas)
+ this.imprimirPeliculas(listaPeliculas)*/
 
 // Número más alto
 // Escribe un programa que pida 10 números. Usando operadores lógicos y cualquier otra función/estructura javascript que 
 //hayas visto antes, determina y da como salida el mayor de esos números.
+
+let numbers = prompt(" ingrese 10 numeros diferentes separados por una coma")
+const numbersList = numbers.split(',');
+
+if (numbersList.length < 10 ){
+    numbers = prompt('Hacen falta numeros, ingresa 10 numeros')
+} else if(numbersList.length > 10) {
+    numbers = prompt('ingreso mas de 10 numeros, favor de corregir')
+}
+
+//console.log(numbersList);
+const parseNumber = numbersList.map((x) => parseInt(x));
+//console.log(parseNumber);
+parseNumber.sort(function (a, b) {
+  return a - b;
+ });
+console.log('el numero mas alto es: ' + parseNumber[parseNumber.length-1]); 
+
+    
+
+
+
+
+
+
 
 // Alarma
 // Escribe un programa que pregunte al usuario la cantidad de segundos necesarios hasta que se ejecute 
