@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fetch y peticiones</title>
+        <!--<script async defer src='./main.js'></script>-->
+        <script async defer src='./fetch.js'></script>
+        <link rel='stylesheet' href='./styles.css'>
+    </head>
+    <body>
+        <button id='btn-counter'>Counter ++</button>
+        <p id='counter'></p>
+
+        <div class='container'>
+            <div class='card--container'>
+            </div>
+
+
+
+            
+                <div id="todos">
+                    <div class="lista pokemon" id="lista pokemon">
+                        <div class="pokemon">
+                            <p class="pokemon-id-back" id="pokemonId">#025</p>
+                            <div class="pokemon-imagen">
+                                <img id="pokemonSrc" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/25.png" alt="pikachu">
+                            </div>
+                            <div class="pokemon.info">
+                                <div class="nombre-contenedor">
+                                    <p class="pokemon-id" id="pokemonId2"> #025</p>
+                                    <h2 class="pokemon-nombre" id="pokemonName">Pikachu</h2>
+                                </div>
+                                <div class="pokemon-status">
+                                    <p class="stat" id="pokemonWeight"> 60kg</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+
+
+            <div class="container row">
+                <label for="poke-name">Pokemon (Name / ID)</label>
+                <input id='poke-name' type="text" name="poke-name" value="">
+            </div>
+            <div class='container row'>
+               <button id='previous-btn' class='btn primary'>Previous</button> 
+               <button id='get-btn' class='btn primary'>Get Pokemon</button> 
+               <button id='next-btn' class='btn primary'>Next</button> 
+            </div>
+        </div>
+
+        <script>
+            localStorage.setItem('pokemon', 'status')
+            console.log(localStorage.getItem('pokemon'))
+        </script>
+    </body>
+</html>
