@@ -23,7 +23,7 @@ const fetchPokemon = async (pokemon) => {
 }
 
 updatePokemon = function (pokemon) {
-    console.log('voy a poner a...', pokemon)
+    //console.log('voy a poner a...', pokemon)
     let pokemonId = document.getElementById('pokemonId');
     let pokemonId2 = document.getElementById('pokemonId2');
     let pokemonName = document.getElementById('pokemonName');
@@ -36,7 +36,7 @@ updatePokemon = function (pokemon) {
     let pokemonSrc = document.getElementById('pokemonSrc');
     let pokemonNewSrc = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"//pokemon.sprites.other['official-artwork'].front_defaul;
     pokemonSrc.setAttribute('src', pokemonNewSrc)
-    console.log(pokemon.sprites.other['official-artwork'].front_default)
+    console.log(pokemon.sprites.other['official-artwork'].front_default);
 }
 
 
@@ -54,9 +54,11 @@ document.getElementById('get-btn')
 
 document.addEventListener('DOMContentLoaded', async () => {
     const storedId = localStorage.getItem('currentPokeId');
+   ////
     const initialId = storedId ? parseInt(storedId) : 1;
     const pokemon = await fetchPokemon(initialId);
     console.log(pokemon.name);
+    ///
 })
 
 // obtener el anterior
@@ -68,6 +70,7 @@ document.getElementById('previous-btn')
     .addEventListener('click', async () => {
         const currentPokeId = parseInt(localStorage.getItem('currentPokeId'));
         const newId = Math.max(1, currentPokeId -1);
+        localStorage.setItem('currentPokeId', newId);
         const pokemon = await fetchPokemon(newId);
         console.log(pokemon.name);
     })
@@ -76,8 +79,9 @@ document.getElementById('next-btn')
     .addEventListener('click', async () => {
         const currentPokeId = parseInt(localStorage.getItem('currentPokeId'));
         const newId = currentPokeId + 1;
+        localStorage.setItem('currentPokeId', newId);
         const pokemon = await fetchPokemon(newId);
-        console.log(pokemon);
+        console.log(pokemon.name);
     })
 
 
